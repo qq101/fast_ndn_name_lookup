@@ -3,10 +3,10 @@
 #include <iostream>
 
 #include "../src/cuckoohash_map.hh"
-#include "../src/city_hasher.hh"
+//#include "../src/city_hasher.hh"
 
 int main() {
-    cuckoohash_map<int, std::string, CityHasher<int> >Table;
+    cuckoohash_map<int, std::string, std::hash<int> >Table;
 
     for (int i = 0; i < 100; i++) {
         Table[i] = "hello"+std::to_string(i);

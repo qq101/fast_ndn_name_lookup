@@ -12,10 +12,10 @@
 #include <utility>
 
 #include "../src/cuckoohash_map.hh"
-#include "../src/city_hasher.hh"
+//#include "../src/city_hasher.hh"
 
 typedef uint32_t KeyType;
-typedef cuckoohash_map<KeyType, size_t, CityHasher<KeyType> > Table;
+typedef cuckoohash_map<KeyType, size_t, std::hash<KeyType> > Table;
 const size_t thread_num = 8;
 const size_t total_inserts = 10000000;
 
