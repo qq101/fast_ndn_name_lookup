@@ -6,19 +6,19 @@
 //#include "../src/city_hasher.hh"
 
 int main() {
-    cuckoohash_map<int, std::string, std::hash<int> >Table;
+	cuckoohash_map<int, std::string, std::hash<int> >Table;
 
-    for (int i = 0; i < 100; i++) {
-        Table[i] = "hello" + std::to_string(i);
-    }
+	for (int i = 0; i < 100; i++) {
+		Table[i] = "hello" + std::to_string(i);
+	}
 
-    for (int i = 0; i < 101; i++) {
-        std::string out;
+	for (int i = 0; i < 101; i++) {
+		std::string out;
 
-        if (Table.find(i, out)) {
-            std::cout << i << "  " << out << std::endl;
-        } else {
-            std::cout << i << "  NOT FOUND" << std::endl;
-        }
-    }
+		if (Table.find(i, out)) {
+			std::cout << i << "  " << out << std::endl;
+		} else {
+			std::cout << i << "  NOT FOUND" << std::endl;
+		}
+	}
 }
