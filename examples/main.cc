@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 		id = atoi(buf2);
 		if (len != 0) {
 			//cout << "len=" << len << " buf1=" << str1 << " id=" << id << endl;
-			Table[str1] = id + 1;
+			Table[str1] = id;
 			line++;
 		}
 	}
