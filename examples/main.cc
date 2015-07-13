@@ -6,6 +6,7 @@
 #include "fstream"
 #include "stdlib.h"
 #include "../src/cuckoohash_map.hh"
+#include "../src/city_hasher.hh"
 using namespace std;
 
 static double gettime(void) {
@@ -16,7 +17,7 @@ static double gettime(void) {
 
 int main(int argc, char *argv[])
 {
-	cuckoohash_map<std::string, int, std::hash<std::string> >Table;
+	cuckoohash_map<std::string, int, CityHasher<std::string> >Table;
 
 	char buf[256];
 	char buf1[256];
